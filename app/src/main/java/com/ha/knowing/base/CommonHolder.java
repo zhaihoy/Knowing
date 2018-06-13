@@ -38,6 +38,8 @@ public abstract class CommonHolder<T> extends RecyclerView.ViewHolder {
      */
     public interface OnNotifyChangeListener {
         void onNotify();
+
+
     }
     OnNotifyChangeListener listener;
     public void setOnNotifyChangeListener(OnNotifyChangeListener listener) {

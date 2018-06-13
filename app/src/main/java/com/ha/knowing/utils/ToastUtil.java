@@ -11,6 +11,11 @@ import com.ha.knowing.View.TkApplication;
 
 public class ToastUtil {
     public static void show(String msg){
-        Toast.makeText(TkApplication.appContext, msg, Toast.LENGTH_SHORT).show();
+
+        try {
+            Toast.makeText(TkApplication.appContext, msg, Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

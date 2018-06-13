@@ -20,10 +20,12 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     public MyFragmentPagerAdapter(FragmentManager fm, ArrayList<BaseFragment> fragmentList) {
         super(fm);
         mFragmentList = fragmentList;
+        System.out.println("============s=="+fragmentList.size());
         mTitles = new String[fragmentList.size()];
 
         for (int i = 0; i < mTitles.length; i++) {
             mTitles[i] = fragmentList.get(i).getName();
+            System.out.println("========"+mTitles[i]);
         }
     }
 
@@ -39,6 +41,8 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
+
+        System.out.println("========tit====="+mTitles[position]);
         return mTitles[position];
     }
 }

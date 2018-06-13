@@ -23,6 +23,8 @@ import java.util.ArrayList;
 
 /*
 * 创建类似知乎的项目
+* UI框架
+* 网络请求（retrofit）
 * */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -76,8 +78,10 @@ public class MainActivity extends AppCompatActivity
         list = new ArrayList<>();
         list.add(new HomeFragment());
         //ViewPage设置适配器
+        System.out.println("==============ss=");
         myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), list);
         mViewPager.setAdapter(myFragmentPagerAdapter);
+        System.out.println("============="+"zoe");
         mTabLayout.setupWithViewPager(mViewPager);
     }
 
